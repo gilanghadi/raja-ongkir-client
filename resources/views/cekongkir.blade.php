@@ -48,7 +48,7 @@
                                 @if ($data != '')
                                     {{ $data['origin_details']['city_name'] }}
                                 @else
-                                    Belum Dipilih
+                                    <span>Belum Dipilih</span>
                                 @endif
                             </div>
                         </div>
@@ -65,6 +65,10 @@
                     </div>
                     <div class="row">
                         <div class="col-12 mt-3">
+                            <p class="text-secondary"><span class="text-danger">PEMBERITAHUAN!</span> harga yang tertera
+                                merupakan
+                                harga asli sebelum
+                                adanya potongan.</p>
                             <div class="gray-light text-secondary p-5 rounded-1">
                                 <table class="table">
                                     <tr>
@@ -141,7 +145,7 @@
                         </div>
                     </div>
                     <div class="row" style="margin-top: 1rem">
-                        <div class="col-12">
+                        <div class="col-12 pb-3">
                             <div
                                 class="bg-white text-white-light d-flex align-items-center px-5 py-4 d-flex justify-content-center rounded-1">
                                 <form method="post" action="{{ route('cek-ongkir') }}" class="w-100">
@@ -167,9 +171,10 @@
                                         </select>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="exampleInputPassword2" class="form-label d-block">Kurir</label>
+                                        <label for="exampleInputPassword2" class="form-label d-block">Jasa
+                                            Pengiriman</label>
                                         <select name="courier" id="destination" class="form-select" required>
-                                            <option selected disabled>Pilih Kurir</option>
+                                            <option selected disabled>Pilih Jasa Pengiriman</option>
                                             <option value="jne">JNE</option>
                                             <option value="pos">POS</option>
                                             <option value="tiki">TIKI</option>
